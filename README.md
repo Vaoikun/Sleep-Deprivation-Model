@@ -21,12 +21,12 @@ $$\frac{1}{2}(\sin(\theta t  - 1.57) + 1) * e^{-\lambda * t}$$
 
 We can then construct a piecewise function for glymphatic activity to model sleeping and waking hours 
 
-$$G(x,t) = \left\{\begin{array}{cc}
+$$G(x,t) = \{\begin{array}{cc}
 \frac{1}{2}(\sin(\theta t  - 1.57) + 1) * e^{-\lambda * t} * A_{s} & \text{if asleep}\\
 .01 * A_s & \text{if awake}
-\end{array}\right.$$
+\end{array}$$
 
-We used a similar method to construct a piecewise function to model the production of waste in brain cells based on the metabolic activity of the brain. In addition to a natural 11\% decrease during sleep, metabolic activity can also be slowed by an over-abundance of waste in the brain. This inverse relationship creates a carrying capacity on waste particles. Thus, production becomes
+We used a similar method to construct a piecewise function to model the production of waste in brain cells based on the metabolic activity of the brain. In addition to a natural 11\% decrease during sleep, metabolic activity can also be slowed by an overabundance of waste in the brain. This inverse relationship creates a carrying capacity for waste particles. Thus, production becomes
 
 $$P(x,t) = \operatorname{prod} \frac{1 - A_{s}}{k} * \left\{ \begin{array}{cc}
 .89 & \text{if asleep}\\
