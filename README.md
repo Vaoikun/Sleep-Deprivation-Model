@@ -42,10 +42,24 @@ Metabolic activity naturally decreases by approximately 11% during sleep and can
 
 $$
 P(x,t) =
-\operatorname{prod}
+\text{prod}\,
 \frac{1 - A_s}{k}
 \begin{cases}
 0.89 & \text{if asleep} \\
 1 & \text{if awake}
 \end{cases}
+$$
+
+The last piece of the equation is to determine how soluble waste converts into damaging fibular waste. This is composed of three terms. The first, $c A_{s}^{2}$, represents a process called primary nucleation. This is the rate at which soluble Aβ monomers form fibrils with each other. Herein is a simplification of our model, as we categorize monomers as soluble and all polymers as non-soluble, when in fact Aβ aggregates exist on a spectrum of size and solubility. We justify this simplification with the slow rate of primary nucleation and the rapid toxification and secondary nucleation of Aβ polymers. The second mass action term, $h A_{s}A_{f}$ represents this latter process of secondary nucleation whereby Aβ monomers bind to existing polymers. This is a much lower energy process and so it happens much more rapidly, though it is dependent on the concentration of fibrillar A$\beta$. The final term is a disaggregation term representing a concentration-dependent rate of disintegration of fibrillar Aβ polymers.
+
+$$
+\text{agg}(x,t) = cA_s^{2} + hA_s A_f - gA_f
+$$
+
+$$
+\frac{dA_s}{dt} = P(x,t) - G(x,t) - \text{agg}(x,t)
+$$
+
+$$
+\frac{dA_f}{dt} = \text{agg}(x,t)
 $$
